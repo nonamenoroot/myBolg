@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小家丁的博客</title>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="style.css">
+    <link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+    <!--font-awesome-->
+    <link rel="stylesheet" href="Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--调入jQuery-->
+     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.slideBox.js" type="text/javascript"></script>
+    <!--自定义js-->
+    <script src="dom.js"></script>
+
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="logo"><img src="images/logo.png" alt="LOFTER"></div>
+        <div class="nav">
+            <ul>
+                <li><a href="" class="first"><i class="icon-sort-up"></i>首页</a></li>
+                <li><a href="">浏览</a></li>
+                <li> <a href="">APP</a></li><li><a href="">ART</a></li>
+                <li><a href="">摄影课堂</a></li>
+                <li><a href="JavaScript:" id = "more">更多 <i class="icon-sort-down "></i></a></li>
+                <!--JavaScript:使得点击a标签后不会刷新网页-->
+            </ul>
+        </div>
+        <div class="dropdowm-memu">
+            <i class="up icon-sort-up icon-2x"></i>
+            <ul>
+                <a href="https://www.baidu.com/" target="_blank"><li><i class="icon-cog "></i>账号设置</li></a>
+                <a href=""><li><i class="icon-github-alt"></i>寻找好友</li></a>
+                <a href=""><li><i class="icon-exchange"></i>导入导出</li></a>
+                <a href=""><li><i class="icon-tablet"></i>移动客户端</li></a>
+                <a href=""><li><i class="icon-eye-open"></i>LOFTCam-用心创造滤镜</li></a>
+                <a href=""><li><i class="icon-user-md"></i>UAPP-创建个人应用</li></a>
+                <a href=""><li><i class="icon-question-sign"></i>帮助及反馈</li></a>
+                <a href=""><li><i class="icon-remove-circle"></i>退出</li></a>
+            </ul>
+        </div>
+        <div class="search">
+            <i class="icon-search"></i>
+            <input type="text" placeholder="搜索标签、人"/>
+        </div>
+        <div class="search-list">
+            <i class="up2 icon-sort-up icon-2x"></i>
+            <ul>
+                <li><i class="icon-tag"></i><a href="">设计</a></li>
+                <li><i class="icon-tag"></i><a href="">二次元</a></li>
+                <li><i class="icon-tag"></i><a href="">拍天空小分队</a></li>
+                <li><i class="icon-tag"></i><a href="">影迷许愿池</a></li>
+                <li><i class="icon-tag"></i><a href="">假装喵星人</a></li>
+                <li><i class="icon-tag"></i><a href="">关于夜色</a></li>
+                <li><i class="icon-tag"></i><a href="">未闻花名</a></li>
+                <li><i class="icon-tag"></i><a href="">三月的狮子</a></li>
+                <li><i class="icon-tag"></i><a href="">四月的谎言</a></li>
+                <li><i class="icon-tag"></i><a href="">Zero</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="demo1" class="slideBox">
+        <ul class="items">
+            <li><a href="#" title="春"><img src="images/1.jpg"></a></li>
+            <li><a href="#" title="纷乱"><img src="images/2.jpg"></a></li>
+            <li><a href="#" title="命运"><img src="images/命运3.jpg"></a></li>
+            <li><a href="#" title="夜色"><img src="images/44.jpg"></a></li>
+            <li><a href="#" title="纷乱"><img src="images/2.jpg"></a></li>
+        </ul>
+    </div>
+    <!--wrapper-->
+    <div class="wrapper">
+        <div class="sub-menu">
+            <div id="preview">
+                 <img id="imghead"  src="images/portrait.png"  onclick="$('#previewImg').click();">
+            </div>
+            <input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg">
+
+            <ul>
+                <li class=" fis icon-text-height icon-3x"><a  href="">文字</a></li>
+                <li class=" sed icon-camera icon-3x"><a href="">图片</a></li>
+                <li class=" thr icon-music icon-3x"><a href="">音乐</a></li>
+                <li class=" fou icon-film icon-3x"><a href="">视频</a></li>
+                <li class=" fiv icon-tasks icon-3x"><a href="">长文</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="head-image">
+                <img src="images/portrait.png" alt="headImg">
+            </div>
+            <div class="content">
+                <div id = "div1"class="default"><h3>命运石之门</h3><br/>
+                <p>命运石之门，原版名为Steins;Gate，是由5pb.、Nitroplus公司开发并由角川书店发行的一款“科学系列”冒险游戏（ADV）。游戏最初于2009年10月15日在Xbox 360游戏上上线，Windows版本于2010年8月26日发售。已于2011年4月TV动画化。于动画版最终话宣布制作剧场版。</p>
+                <p>续作命运石之门0在2015年3月28日举办的新作发表会上发表，关于未能拯救牧濑红莉栖β世界线未来的故事，并同时发表了作品的动画化决定。并已于2015年12月10日正式于PS平台发售。2016年3月31日确定将于8月24日在PC平台发售。</p>
+                <p>命运石之门（Steins;Gate）的Steins德语的意思是石头，音译：斯坦因）。强调：在故事中，名词创造者本人——冈部伦太郎/凤凰院凶真明确地指出：这个名词是没有任何含义的，与任何人和事件亦或者物件无关，而没有含义才导致了它却是本作最终的关键词。
+                </p>
+                <p>5pb.Games于2008年推出了由社长志仓千代丸亲自企划并担当制作人的科学幻想作品[Chaos;Head]后，取得了非凡的成功与不俗的成绩。在改编为新番动画后人气更是经久不衰，在2009年年初推出的“增强完整版”性质的[Chaos;Head Noah]在次时代主机Xbox360上首周竟也卖出万套以上。携此作的空前成功之势，5pb.Games在2009年10月15日推出同系列新作[Steins;Gate]，前作的核心团队新加入话题人物组成了更强的制作团队。本作在发售后取得了超高的人气，超高的口碑与超高的销量。可以视为5pb.游戏分公司成立以来最为成功的一款作品。而其制作人志仓千代丸、剧本家林直孝也因此成为了人气飙升的话题人物。</p>
+                <p>冈部伦太郎–中二病的大学生，自称疯狂科学家-凤凰院凶真。他在“未来机械研究所”里发明了“电话烤箱（暂定）”，这个道具有着是类似时空旅行的惊人机能，能够对过去寄送电子邮件。某日，主角遇到了18岁的天才少女-牧瀬红莉栖，但是，就在数个小时前，主角才亲眼目击到她在大厦的屋顶遭到杀害……故事由此展开。[1] </p>
+                </div>
+                <div class="footer">
+                    <div class="left-footer">
+                        <a href="JavaScript:" id="open">展开</a>
+                        <a href=""><p><i class="icon-file"></i>推文</p></a>
+                    </div>
+                    <div class="right-footer">
+                        <div>
+                            <a href=""><span>热度(39)</span></a>
+                            <a href=""><span>评论(0)</span></a>
+                            <a href=""><span>分享</span></a>
+                            <a href=""><span>推荐</span></a>
+                            <a href="JavaScript:" title="喜欢" id="guanzhu"><span><i class=" icon-heart"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="person-center">
+                <ul>
+                    <li>小家丁的主页</li>
+                    <li><a href=""><i class=" icon-th-list">&nbsp;&nbsp;&nbsp;</i>文章</a><span>6</span></li>
+                    <li><a href=""><i class=" icon-heart">&nbsp;&nbsp;&nbsp;</i>关注</a><span>5</span></li>
+                    <li><a href=""><i class=" icon-bullhorn">&nbsp;&nbsp;&nbsp;</i>通知</a></li>
+                    <li><a href=""><i class="  icon-legal">&nbsp;&nbsp;&nbsp;</i>个人主页设置</a></li>
+                </ul>
+            </div>
+            <div class="advertise">
+                <img src="images/2.jpg" alt="纷乱">
+                <img src="images/44.jpg" alt="夜色">
+                <img src="images/盐耶.jpg" alt="言叶之庭">
+                <img src="images/girl.jpg" alt="面码">
+            </div>
+        </div>
+    </div>
+    <!--蒙版-->
+    <div class="mask">
+        <div class="imgpanel">
+            <img src="images/2.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
