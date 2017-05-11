@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟对话框</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body,html{
+			width: 1920px;
+			height:1080px; 
+		}
+		button{
+			margin-left: 40%;
+			margin-top: 10%;
+		}
+		/*蒙版*/
+		.mask{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(128,128,128,0.4);
+			display: none;
+		}
+		.contenter
+		{
+			width: 300px;
+			height: 145px;
+			border: 1px solid white;
+			margin: 0 auto;
+			margin-top: 10%;
+			border-radius: 15px;
+			background-color: white;
+			padding: 5px 10px;
+			box-sizing: border-box;
+			animation: drop .5s ease;
+		}
+		@keyframes drop{
+			0%{margin-top: 0%;}
+			100%{margin-top: 10%;}
+		}
+		.header{
+			border-bottom: 1px solid #ccc;
+			text-align: left;
+			padding:  10px 0 3px 5px;
+			font:bold 17px "微软雅黑";
+		}
+		.content{
+			min-height: 40px;
+			max-height: 40px;
+			line-height: 22px;
+			border-bottom: 1px solid #ccc;
+			font-size: 14px;
+			padding: 5px 0;
+			overflow: hidden;
+		}
+		.footer{
+			height: 30px;
+			box-sizing: border-box;
+			padding: 6px 0;
+		}
+		.btn{
+			width: 68px;
+			height: 30px;
+			line-height: 30px;
+			float: right;
+			margin: 0 10px;
+			text-align: center;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: white;
+			cursor: pointer;
+		}
+		.btn:first-child{
+			background-color: rgb(32,144,240);
+			color: white;
+		}
+		.btn:nth-child(2){
+			background-color: #FF4040;
+			color: white;
+		}
+		.btn:hover{
+			background-color:#00C5CD;
+		}
+		.forbid-scroll{  
+		    height:100%;  
+		    overflow:hidden;  
+		}  
+	</style>
+</head>
+<body>
+	<button id="popbtn">弹出对话框</button>
+	<!-- 对话框结构 -->
+	<div class="mask" id="masking">
+		<div class="contenter">
+			<div class="header">自定义对话框</div>
+			<div class="content" id="str">这是一个模拟的弹出框，内容部分可以通过JavaScript来修改？</div>
+			<div class="footer">
+				<div class="btn" id="submit">确认</div>
+				<div class="btn" id="cancel">取消</div>
+			</div>
+		</div>
+	</div>
+	<script src='js/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var popbtn = document.getElementById('popbtn'),
+				submit = document.getElementById('submit'),
+				cancel = document.getElementById('cancel'),
+				mask = document.getElementById('masking');
+			// 按钮点击事件
+			popbtn.onclick = function(){
+					customConfig("这是一个自定义的模拟的弹出框，内容部分可以通过JavaScript来修改？");
+			};
+			
+		};
+		// 自定义的对话框函数，参数内容
+		function customConfig(contenting){
+			var mask = document.getElementById('masking'),
+				str = document.getElementById('str'),
+			 	box = document.body || document;
+
+			mask.style.display = 'block';
+			str.innerHTML = contenting;
+			// 禁止滚动
+			box.classList.add('forbid-scroll');//添加一个类
+
+			// 确认事件
+			submit.onclick = function(){
+				mask.style.display = 'none';
+				box.classList.remove('forbid-scroll');//除去一个类
+			};
+
+			// 取消事件
+			cancel.onclick = function(){
+				mask.style.display = 'none';
+				box.classList.remove('forbid-scroll');
+			};	
+
+		}
+	</script>
+</body>
+</html>
